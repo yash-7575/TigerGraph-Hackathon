@@ -2,15 +2,15 @@
 
 TigerGraph Hackathon Round 1 submission. Three interchangeable pipelines — **RAG**, **GraphRAG**, and **Agentic GraphRAG** — over a 2,951-doc Wikipedia (Olympics-heavy) corpus, benchmarked side by side on 100 public + 50 hidden questions.
 
-## Results (headline)
+## Results (headline) — 100 public Qs, 30 Sept 2026
 
-Run `make dashboard` after `make bench` to render `docs/index.html`. Latest numbers live there.
+| Pipeline | Accuracy | Recall@K | Median tokens | Median latency | Notes |
+|---|---|---|---|---|---|
+| RAG | **69.0%** | 57% | ~4.5k in | ~16s | Vector search (k=8, k=16 for aggregation) + LLM compose. Lookup 100%, temporal 86%, multi_hop 68%, aggregation 57%, superlative 0% |
+| GraphRAG | (bench running — see `docs/index.html` after `make graphrag`) | | | | Entity-linked seeds + seed-restricted vector expansion + LLM compose |
+| Agentic | (pending — see HANDOVER.md) | | | | Tool-calling loop (entity_link → vector_search → doc_fetch → aggregate → answer), 8-step / 30k-token cap |
 
-| Pipeline | Accuracy | Median tokens | Median latency | Notes |
-|---|---|---|---|---|
-| RAG | (see dashboard) | | | Vector search + LLM |
-| GraphRAG | (see dashboard) | | | Entity-linked seeds + vector expansion + LLM |
-| Agentic | (see dashboard) | | | Tool-calling loop (entity_link → graph_hop → vector_search → aggregate → answer), budget-capped |
+Full per-qtype breakdown: open `docs/index.html` (built via `make dashboard`). Raw per-question JSON + `summary.csv` under `results/{rag,graphrag,agentic}/`.
 
 ## Architecture
 

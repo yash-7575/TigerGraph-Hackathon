@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Agentic GraphRAG — Benchmark</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:2rem;background:#0d1117;color:#e6edf3;}
+  h1{margin:.2rem 0;font-size:1.6rem;} h2{margin-top:2.2rem;color:#79c0ff;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem;}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;}
+  .card h3{margin:0 0 .5rem;font-size:1rem;color:#7ee787;}
+  .metric{font-size:1.5rem;font-weight:600;margin:.2rem 0;}
+  table{border-collapse:collapse;margin-top:.8rem;width:100%;font-size:.9rem;}
+  th,td{border:1px solid #30363d;padding:.35rem .6rem;text-align:left;}
+  th{background:#21262d;}
+  .bar{background:#238636;height:8px;border-radius:4px;}
+  .pill{display:inline-block;background:#1f6feb;color:white;padding:.15rem .5rem;border-radius:12px;font-size:.75rem;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+<h1>Agentic GraphRAG — Three-Pipeline Benchmark</h1>
+<p>TigerGraph Hackathon · corpus: 2,951 Wikipedia docs · eval: 100 public questions</p>
+
+<h2>Headline</h2>
+<div class="grid"><div class="card"><h3>RAG</h3><div class="metric">69.0%</div><div>accuracy on 100 Qs</div><div style="margin-top:.6rem;font-size:.85rem;color:#8b949e;">4626 med tokens · 15.8s median</div></div></div>
+
+<h2>Accuracy by question type</h2>
+<canvas id="acc" height="120"></canvas>
+
+<h2>Cost & latency (median per question)</h2>
+<canvas id="cost" height="120"></canvas>
+
+<h2>Per-pipeline detail</h2>
+<h3><span class="pill">rag</span></h3><table><thead><tr><th>qtype</th><th>n</th><th>accuracy</th><th>recall</th><th>med tokens</th><th>med latency</th></tr></thead><tbody><tr><td>aggregation</td><td>21</td><td>57.1%</td><td>32.8%</td><td>8762</td><td>18.3s</td></tr><tr><td>lookup</td><td>19</td><td>100.0%</td><td>100.0%</td><td>4472</td><td>15.7s</td></tr><tr><td>multi_hop</td><td>28</td><td>67.9%</td><td>75.0%</td><td>4495</td><td>16.0s</td></tr><tr><td>superlative</td><td>10</td><td>0.0%</td><td>9.1%</td><td>4466</td><td>16.4s</td></tr><tr><td>temporal</td><td>22</td><td>86.4%</td><td>43.2%</td><td>4486</td><td>14.4s</td></tr></tbody></table>
+
+<h2>Sample questions</h2>
+<table><thead><tr><th>qid</th><th>qtype</th><th>gold</th><th>rag</th></tr></thead><tbody><tr><td>pub-001</td><td>aggregation</td><td>5</td><td>✓ 5</td></tr><tr><td>pub-003</td><td>aggregation</td><td>8</td><td>✗ 6</td></tr><tr><td>pub-002</td><td>temporal</td><td>Chen Ding</td><td>✓ Chen Ding</td></tr><tr><td>pub-004</td><td>superlative</td><td>Athletics at the 2008 Summer Olympics – Men's marathon</td><td>✗ Men's marathon</td></tr><tr><td>pub-005</td><td>multi_hop</td><td>Naim Süleymanoğlu</td><td>✓ Naim Süleymanoğlu</td></tr></tbody></table>
+
+<script>
+const perQtype = {"rag": [{"qtype": "aggregation", "n": 21, "accuracy": 0.5714285714, "recall": 0.3277271853, "tokens_in": 8762.0, "latency_ms": 18341.0}, {"qtype": "lookup", "n": 19, "accuracy": 1.0, "recall": 1.0, "tokens_in": 4472.0, "latency_ms": 15657.0}, {"qtype": "multi_hop", "n": 28, "accuracy": 0.6785714286, "recall": 0.75, "tokens_in": 4495.0, "latency_ms": 16027.0}, {"qtype": "superlative", "n": 10, "accuracy": 0.0, "recall": 0.0907022048, "tokens_in": 4466.5, "latency_ms": 16429.0}, {"qtype": "temporal", "n": 22, "accuracy": 0.8636363636, "recall": 0.4318181818, "tokens_in": 4486.5, "latency_ms": 14364.5}]};
+const summary = {"rag": 100};
+
+const qtypes = [...new Set(Object.values(perQtype).flat().map(r=>r.qtype))].sort();
+
+function series(field){
+  return Object.entries(perQtype).map(([p,rows])=>({
+    label: p,
+    data: qtypes.map(qt => {
+      const r = rows.find(x=>x.qtype===qt);
+      return r ? (r[field]??0) : 0;
+    }),
+    borderWidth: 1,
+  }));
+}
+
+new Chart(document.getElementById('acc'), {
+  type: 'bar',
+  data: {labels: qtypes, datasets: series('accuracy')},
+  options: {scales: {y: {min:0,max:1}}, plugins:{legend:{labels:{color:'#e6edf3'}}}}
+});
+
+new Chart(document.getElementById('cost'), {
+  type: 'bar',
+  data: {labels: qtypes, datasets: series('tokens_in')},
+  options: {plugins:{legend:{labels:{color:'#e6edf3'}}}}
+});
+</script>
+</body></html>

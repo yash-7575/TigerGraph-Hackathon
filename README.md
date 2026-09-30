@@ -23,7 +23,44 @@ Question
    │
    └─ Agentic    → orchestrator loop {plan → tool → evaluate} × ≤8 steps, 30k-token cap
                      tools: entity_link, vector_search, doc_fetch, aggregate, answer
-                     fallback: graphrag on budget exhaustion
+                      fallback: graphrag on budget exhaustion
+```
+
+```mermaid
+flowchart TD
+    Q[Question] --> ROUTER{router<br/>qtype heuristic}
+    ROUTER --> RAG[RAG pipeline<br/>vector_search k=8, k=16 agg]
+    ROUTER --> GRAG[GraphRAG pipeline<br/>entity_link → vector_search → doc_fetch]
+    ROUTER --> AG[Agentic orchestrator<br/>plan → tool → evaluate x ≤8 steps<br/>30k-token cap]
+
+    RAG --> VS[vector_search tool]
+    GRAG --> EL[entity_link tool<br/>alias index + fuzzy fallback]
+    EL --> VSS[seed-restricted vector_search<br/>seed_ids + k=8]
+    VSS --> DF[doc_fetch tool]
+    VS --> DF
+
+    AG --> EL
+    AG --> VS
+    AG --> DF
+    AG --> AGGR[aggregate tool<br/>Python count/sum/min/max]
+    AG --> ANST[answer tool]
+    AG -.->|budget exhausted| GRAG
+
+    VS --> VIDX[(local numpy vector index<br/>15,345 chunks<br/>nemotron-3-embed-1b 2048d cosine)]
+    VSS --> VIDX
+    DF --> VIDX
+    VIDX -.->|structured traversal| TG[(TigerGraph Savanna<br/>stubbed for R2)]
+    AG -.-> CACHE[(SQLite cache<br/>.cache/llm.sqlite)]
+
+    RAG --> COMP[composer<br/>gpt-oss-20b via NVIDIA NIM]
+    GRAG --> COMP
+    ANST --> COMP
+    COMP --> AO[AnswerObject<br/>answer + citations<br/>citation-guard intersect]
+    AO --> BH[bench harness<br/>bench/run.py x8 workers]
+    BH --> PUB[100 public Qs<br/>results per pipeline]
+    BH --> HID[50 hidden Qs<br/>results/agentic]
+    PUB --> DASH[docs/index.html dashboard<br/>summary.csv + per_qtype.json]
+    HID --> DASH
 ```
 
 See `TECHNICAL_DESIGN.md` for full design, `PRD.md` for scope, `SRS.md` for requirements.

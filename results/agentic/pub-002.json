@@ -1,0 +1,50 @@
+{
+  "answer": "Chen Ding",
+  "citations": [
+    "Q1050909"
+  ],
+  "pipeline": "agentic",
+  "qid": "pub-002",
+  "tokens": {
+    "input": 6652,
+    "output": 323,
+    "cached": 0
+  },
+  "latency_ms": 20051,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "args": {
+        "text": "2012 Summer Olympics",
+        "k": 5
+      },
+      "n_docs_added": 5,
+      "n_docs_total": 5,
+      "tokens_so_far": 670
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "args": {
+        "query": "Men's 20 kilometres walk 2012 Olympics gold medal",
+        "k": 8
+      },
+      "n_docs_added": 8,
+      "n_docs_total": 13,
+      "tokens_so_far": 1635
+    },
+    {
+      "step": 3,
+      "tool": "answer",
+      "args": {
+        "answer": "Chen Ding",
+        "citations": [
+          "Q1050909"
+        ]
+      }
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

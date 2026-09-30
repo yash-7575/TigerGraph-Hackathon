@@ -1,0 +1,73 @@
+{
+  "answer": "Martina Sáblíková",
+  "citations": [
+    "Q580481"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-011",
+  "tokens": {
+    "input": 16719,
+    "output": 627,
+    "cached": 0
+  },
+  "latency_ms": 13268,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q1005784",
+        "Q1005641",
+        "Q3628768",
+        "Q607635",
+        "Q644408",
+        "Q1067177"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q607635",
+        "Q1067177",
+        "Q644408",
+        "Q644408",
+        "Q644408",
+        "Q3628768",
+        "Q1005784",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q848696",
+        "Q595972",
+        "Q905540",
+        "Q580481",
+        "Q607635",
+        "Q916771",
+        "Q782429",
+        "Q848666",
+        "Q1067177",
+        "Q644408",
+        "Q644408",
+        "Q644408"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q607635",
+        "Q644408",
+        "Q1067177"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

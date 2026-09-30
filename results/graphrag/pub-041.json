@@ -1,0 +1,74 @@
+{
+  "answer": "Nino Schurter",
+  "citations": [
+    "Q25476845"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-041",
+  "tokens": {
+    "input": 8507,
+    "output": 137,
+    "cached": 0
+  },
+  "latency_ms": 8436,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26233801",
+        "Q26212144",
+        "Q26208755"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q26208755",
+        "Q26212144",
+        "Q26233801",
+        "Q939000",
+        "Q607635",
+        "Q303623",
+        "Q26208755",
+        "Q939000"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q25476845",
+        "Q25476835",
+        "Q25476761",
+        "Q26260943",
+        "Q2297686",
+        "Q26213160",
+        "Q26237425",
+        "Q26259596",
+        "Q26208755",
+        "Q26212144",
+        "Q26233801",
+        "Q939000"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q939000",
+        "Q26233801",
+        "Q26212144",
+        "Q26208755"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

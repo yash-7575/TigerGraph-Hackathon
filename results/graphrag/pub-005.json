@@ -1,0 +1,74 @@
+{
+  "answer": "Naim Süleymanoğlu",
+  "citations": [
+    "Q25239316"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-005",
+  "tokens": {
+    "input": 8122,
+    "output": 336,
+    "cached": 0
+  },
+  "latency_ms": 14817,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26212144",
+        "Q25239321",
+        "Q25239533",
+        "Q7400295"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q25239533",
+        "Q25239321",
+        "Q26212144",
+        "Q7400295",
+        "Q26212144",
+        "Q26212144",
+        "Q303623",
+        "Q607635"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q4160921",
+        "Q55615395",
+        "Q55615399",
+        "Q10522576",
+        "Q10522554",
+        "Q25239314",
+        "Q3500407",
+        "Q25239316",
+        "Q25239533",
+        "Q25239321",
+        "Q26212144",
+        "Q7400295"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q26212144",
+        "Q25239321",
+        "Q25239533"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

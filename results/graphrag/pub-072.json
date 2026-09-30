@@ -1,0 +1,72 @@
+{
+  "answer": "Lee Sang-hwa",
+  "citations": [
+    "Q848666",
+    "Q15056224"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-072",
+  "tokens": {
+    "input": 7697,
+    "output": 123,
+    "cached": 0
+  },
+  "latency_ms": 4633,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q9663",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q607635",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q939000",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q15056224",
+        "Q15056225",
+        "Q47309836",
+        "Q952458",
+        "Q15056223",
+        "Q1222127",
+        "Q15506518",
+        "Q848666",
+        "Q607635",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q607635",
+        "Q9663"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

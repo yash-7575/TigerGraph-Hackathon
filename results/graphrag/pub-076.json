@@ -1,0 +1,70 @@
+{
+  "answer": "Julia Mancuso",
+  "citations": [
+    "Q2574045"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-076",
+  "tokens": {
+    "input": 7312,
+    "output": 169,
+    "cached": 0
+  },
+  "latency_ms": 7660,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q7400295",
+        "Q4951829",
+        "Q2500292"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q4951829",
+        "Q2500292",
+        "Q7400295",
+        "Q2500292",
+        "Q7400295",
+        "Q7400295",
+        "Q7400295",
+        "Q3018583"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q917752",
+        "Q2574045",
+        "Q585893",
+        "Q1042644",
+        "Q917747",
+        "Q917743",
+        "Q823663",
+        "Q1005801",
+        "Q4951829",
+        "Q2500292",
+        "Q7400295",
+        "Q2500292"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q7400295",
+        "Q4951829",
+        "Q2500292"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

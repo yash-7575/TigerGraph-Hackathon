@@ -1,0 +1,73 @@
+{
+  "answer": "Kjetil André Aamodt",
+  "citations": [
+    "Q1534918"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-043",
+  "tokens": {
+    "input": 8169,
+    "output": 93,
+    "cached": 0
+  },
+  "latency_ms": 6761,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q7400295",
+        "Q4951829",
+        "Q2500292",
+        "Q1005641",
+        "Q870647",
+        "Q1573389"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q870647",
+        "Q1005641",
+        "Q1573389",
+        "Q1005641",
+        "Q1005641",
+        "Q2500292",
+        "Q4951829",
+        "Q7400295"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q1534918",
+        "Q1005286",
+        "Q1005805",
+        "Q1005572",
+        "Q988347",
+        "Q988374",
+        "Q1005331",
+        "Q870647",
+        "Q1005641",
+        "Q1573389",
+        "Q1005641",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q1005641",
+        "Q870647",
+        "Q1573389"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

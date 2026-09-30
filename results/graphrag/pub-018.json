@@ -1,0 +1,72 @@
+{
+  "answer": "Kevin Jackson",
+  "citations": [
+    "Q3498597"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-018",
+  "tokens": {
+    "input": 8571,
+    "output": 113,
+    "cached": 0
+  },
+  "latency_ms": 5289,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26233801"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q26233801",
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26233801",
+        "Q303623",
+        "Q26233801",
+        "Q303623"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q8037937",
+        "Q8037922",
+        "Q3498597",
+        "Q8037930",
+        "Q8037934",
+        "Q8037924",
+        "Q8037940",
+        "Q8037929",
+        "Q26233801",
+        "Q303623",
+        "Q607635",
+        "Q939000"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26233801"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

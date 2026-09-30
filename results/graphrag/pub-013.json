@@ -1,0 +1,71 @@
+{
+  "answer": "Allison Schmitt",
+  "citations": [
+    "Q2071152"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-013",
+  "tokens": {
+    "input": 7691,
+    "output": 106,
+    "cached": 0
+  },
+  "latency_ms": 2139,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26233801"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q26233801",
+        "Q939000",
+        "Q939000",
+        "Q303623",
+        "Q26233801",
+        "Q607635",
+        "Q303623",
+        "Q26233801"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q25932069",
+        "Q25991462",
+        "Q25932666",
+        "Q25991464",
+        "Q25932055",
+        "Q26237636",
+        "Q25927635",
+        "Q2071152",
+        "Q26233801",
+        "Q939000",
+        "Q939000",
+        "Q303623"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q303623",
+        "Q939000",
+        "Q26233801"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

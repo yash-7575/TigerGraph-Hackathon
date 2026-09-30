@@ -7,7 +7,7 @@ TigerGraph Hackathon Round 1 submission. Three interchangeable pipelines — **R
 | Pipeline | Accuracy | Recall@K | Median tokens | Median latency | Notes |
 |---|---|---|---|---|---|
 | RAG | **69.0%** | 57% | ~4.5k in | ~16s | Vector search (k=8, k=16 for aggregation) + LLM compose. Lookup 100%, temporal 86%, multi_hop 68%, aggregation 57%, superlative 0% |
-| GraphRAG | (bench running — see `docs/index.html` after `make graphrag`) | | | | Entity-linked seeds + seed-restricted vector expansion + LLM compose |
+| GraphRAG | **68.0%** | 56% | ~8.5k in | ~7.6s | Entity-linked seeds + seed-restricted vector expansion + LLM compose. Lookup 100%, temporal 91%, multi_hop 64%, aggregation 52%, superlative 0% |
 | Agentic | (pending — see HANDOVER.md) | | | | Tool-calling loop (entity_link → vector_search → doc_fetch → aggregate → answer), 8-step / 30k-token cap |
 
 Full per-qtype breakdown: open `docs/index.html` (built via `make dashboard`). Raw per-question JSON + `summary.csv` under `results/{rag,graphrag,agentic}/`.

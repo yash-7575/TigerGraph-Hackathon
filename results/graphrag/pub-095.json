@@ -1,0 +1,72 @@
+{
+  "answer": "Usain Bolt",
+  "citations": [
+    "Q754844"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-095",
+  "tokens": {
+    "input": 8155,
+    "output": 291,
+    "cached": 0
+  },
+  "latency_ms": 3554,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q1005784",
+        "Q1005641",
+        "Q3628768",
+        "Q743905",
+        "Q250187"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q743905",
+        "Q1005784",
+        "Q250187",
+        "Q743905",
+        "Q743905",
+        "Q250187",
+        "Q250187",
+        "Q743905"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q830711",
+        "Q743905",
+        "Q947691",
+        "Q754844",
+        "Q517035",
+        "Q1084677",
+        "Q766954",
+        "Q1043361",
+        "Q1005784",
+        "Q250187",
+        "Q743905",
+        "Q743905"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q1005784",
+        "Q743905",
+        "Q250187"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

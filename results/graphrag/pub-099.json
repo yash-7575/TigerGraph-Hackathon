@@ -1,0 +1,78 @@
+{
+  "answer": "Erik Lesser, Daniel Böhm, Arnd Peiffer and Simon Schempp (Germany)",
+  "citations": [
+    "Q15052014"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-099",
+  "tokens": {
+    "input": 8214,
+    "output": 378,
+    "cached": 0
+  },
+  "latency_ms": 6868,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q47155555",
+        "Q47155815",
+        "Q47155505",
+        "Q578012",
+        "Q259965",
+        "Q523492",
+        "Q15506518",
+        "Q15619183",
+        "Q15056220"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q15506518",
+        "Q47155505",
+        "Q15056220",
+        "Q47155815",
+        "Q47155555",
+        "Q15619183",
+        "Q523492",
+        "Q47155815"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q14643284",
+        "Q15052019",
+        "Q15052012",
+        "Q15052025",
+        "Q15052014",
+        "Q14643126",
+        "Q15052022",
+        "Q15021060",
+        "Q15506518",
+        "Q47155505",
+        "Q15056220",
+        "Q47155815"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q47155815",
+        "Q47155505"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

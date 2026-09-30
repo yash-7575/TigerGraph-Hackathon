@@ -1,0 +1,70 @@
+{
+  "answer": "Jason Lamy Chappuis",
+  "citations": [
+    "Q303268"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-040",
+  "tokens": {
+    "input": 7007,
+    "output": 142,
+    "cached": 0
+  },
+  "latency_ms": 2764,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q9663",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q607635",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q15056068",
+        "Q15056067",
+        "Q303268",
+        "Q15055007",
+        "Q15056065",
+        "Q15055009",
+        "Q15021060",
+        "Q988372",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q9663"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

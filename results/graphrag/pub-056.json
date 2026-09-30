@@ -1,0 +1,71 @@
+{
+  "answer": "Yevgeny Dementyev",
+  "citations": [
+    "Q824803"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-056",
+  "tokens": {
+    "input": 7619,
+    "output": 124,
+    "cached": 0
+  },
+  "latency_ms": 3976,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q9663",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q607635",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q848689",
+        "Q824803",
+        "Q916916",
+        "Q225969",
+        "Q384953",
+        "Q1004888",
+        "Q843851",
+        "Q916724",
+        "Q607635",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q607635",
+        "Q9663"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

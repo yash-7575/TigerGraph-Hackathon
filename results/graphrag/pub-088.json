@@ -1,0 +1,89 @@
+{
+  "answer": "Men's giant slalom",
+  "citations": [
+    "Q1005805"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-088",
+  "tokens": {
+    "input": 11854,
+    "output": 171,
+    "cached": 0
+  },
+  "latency_ms": 7194,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q9663",
+        "Q1005641",
+        "Q870647"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q1005641",
+        "Q870647",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q1005331",
+        "Q1005286",
+        "Q1005805",
+        "Q1005641",
+        "Q988374",
+        "Q1005616",
+        "Q988347",
+        "Q988361",
+        "Q1005572",
+        "Q1534918",
+        "Q1222209",
+        "Q1005213",
+        "Q1005065",
+        "Q1004935",
+        "Q870647",
+        "Q1222639",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q9663",
+        "Q1005641",
+        "Q870647"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

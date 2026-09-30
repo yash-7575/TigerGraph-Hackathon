@@ -1,0 +1,77 @@
+{
+  "answer": "28",
+  "citations": [
+    "Q334901"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-029",
+  "tokens": {
+    "input": 8032,
+    "output": 80,
+    "cached": 0
+  },
+  "latency_ms": 5571,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q334901",
+        "Q303623",
+        "Q607635",
+        "Q1205250",
+        "Q26237421",
+        "Q26237423",
+        "Q939000",
+        "Q26233801",
+        "Q26219861",
+        "Q2071152"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q334901",
+        "Q26237421",
+        "Q1205250",
+        "Q26237421",
+        "Q1205250",
+        "Q26237421",
+        "Q303623",
+        "Q334901"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q334901",
+        "Q2353475",
+        "Q1346374",
+        "Q26237418",
+        "Q7500813",
+        "Q5395306",
+        "Q17088224",
+        "Q7500745",
+        "Q26237421",
+        "Q1205250",
+        "Q26237421",
+        "Q1205250"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q334901",
+        "Q1205250",
+        "Q26237421"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,75 @@
+{
+  "answer": "Guo Wenjun",
+  "citations": [
+    "Q736527"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-081",
+  "tokens": {
+    "input": 8168,
+    "output": 180,
+    "cached": 0
+  },
+  "latency_ms": 8671,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q1005784",
+        "Q1005641",
+        "Q1205250",
+        "Q1204722",
+        "Q26237418",
+        "Q26430868",
+        "Q1064845"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q1204722",
+        "Q1205250",
+        "Q1005784",
+        "Q1205250",
+        "Q1204722",
+        "Q1205250",
+        "Q26237418",
+        "Q1205250"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q940196",
+        "Q1204722",
+        "Q1005722",
+        "Q1005606",
+        "Q1346374",
+        "Q1205250",
+        "Q775967",
+        "Q736527",
+        "Q1005784",
+        "Q1205250",
+        "Q1204722",
+        "Q1205250"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q1005784",
+        "Q1205250",
+        "Q1204722"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

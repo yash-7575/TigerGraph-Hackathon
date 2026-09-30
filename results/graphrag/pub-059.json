@@ -1,0 +1,70 @@
+{
+  "answer": "Laura Dahlmeier",
+  "citations": [
+    "Q107861710"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-059",
+  "tokens": {
+    "input": 6937,
+    "output": 336,
+    "cached": 0
+  },
+  "latency_ms": 14542,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q9663",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q939000",
+        "Q9663",
+        "Q9663",
+        "Q939000"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q107861710",
+        "Q107861714",
+        "Q107861726",
+        "Q107861723",
+        "Q107861706",
+        "Q1222176",
+        "Q14643284",
+        "Q107861699",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q9663"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

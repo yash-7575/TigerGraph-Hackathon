@@ -20,7 +20,8 @@
 <p>TigerGraph Hackathon · corpus: 2,951 Wikipedia docs · eval: 100 public questions</p>
 
 <h2>Headline</h2>
-<div class="grid"><div class="card"><h3>RAG</h3><div class="metric">69.0%</div><div>accuracy on 100 Qs</div><div style="margin-top:.6rem;font-size:.85rem;color:#8b949e;">4626 med tokens · 15.8s median</div></div></div>
+<div class="grid"><div class="card"><h3>RAG</h3><div class="metric">69.0%</div><div>accuracy on 100 Qs</div><div style="margin-top:.6rem;font-size:.85rem;color:#8b949e;">4626 med tokens · 15.8s median</div></div>
+<div class="card"><h3>GRAPHRAG</h3><div class="metric">68.0%</div><div>accuracy on 100 Qs</div><div style="margin-top:.6rem;font-size:.85rem;color:#8b949e;">8631 med tokens · 7.6s median</div></div></div>
 
 <h2>Accuracy by question type</h2>
 <canvas id="acc" height="120"></canvas>
@@ -30,13 +31,14 @@
 
 <h2>Per-pipeline detail</h2>
 <h3><span class="pill">rag</span></h3><table><thead><tr><th>qtype</th><th>n</th><th>accuracy</th><th>recall</th><th>med tokens</th><th>med latency</th></tr></thead><tbody><tr><td>aggregation</td><td>21</td><td>57.1%</td><td>32.8%</td><td>8762</td><td>18.3s</td></tr><tr><td>lookup</td><td>19</td><td>100.0%</td><td>100.0%</td><td>4472</td><td>15.7s</td></tr><tr><td>multi_hop</td><td>28</td><td>67.9%</td><td>75.0%</td><td>4495</td><td>16.0s</td></tr><tr><td>superlative</td><td>10</td><td>0.0%</td><td>9.1%</td><td>4466</td><td>16.4s</td></tr><tr><td>temporal</td><td>22</td><td>86.4%</td><td>43.2%</td><td>4486</td><td>14.4s</td></tr></tbody></table>
+<h3><span class="pill">graphrag</span></h3><table><thead><tr><th>qtype</th><th>n</th><th>accuracy</th><th>recall</th><th>med tokens</th><th>med latency</th></tr></thead><tbody><tr><td>aggregation</td><td>21</td><td>52.4%</td><td>25.2%</td><td>12413</td><td>17.4s</td></tr><tr><td>lookup</td><td>19</td><td>100.0%</td><td>100.0%</td><td>8439</td><td>3.8s</td></tr><tr><td>multi_hop</td><td>28</td><td>64.3%</td><td>71.4%</td><td>8067</td><td>8.1s</td></tr><tr><td>superlative</td><td>10</td><td>0.0%</td><td>8.1%</td><td>12103</td><td>11.0s</td></tr><tr><td>temporal</td><td>22</td><td>90.9%</td><td>47.7%</td><td>7694</td><td>5.3s</td></tr></tbody></table>
 
 <h2>Sample questions</h2>
-<table><thead><tr><th>qid</th><th>qtype</th><th>gold</th><th>rag</th></tr></thead><tbody><tr><td>pub-001</td><td>aggregation</td><td>5</td><td>✓ 5</td></tr><tr><td>pub-003</td><td>aggregation</td><td>8</td><td>✗ 6</td></tr><tr><td>pub-002</td><td>temporal</td><td>Chen Ding</td><td>✓ Chen Ding</td></tr><tr><td>pub-004</td><td>superlative</td><td>Athletics at the 2008 Summer Olympics – Men's marathon</td><td>✗ Men's marathon</td></tr><tr><td>pub-005</td><td>multi_hop</td><td>Naim Süleymanoğlu</td><td>✓ Naim Süleymanoğlu</td></tr></tbody></table>
+<table><thead><tr><th>qid</th><th>qtype</th><th>gold</th><th>rag</th><th>graphrag</th></tr></thead><tbody><tr><td>pub-001</td><td>aggregation</td><td>5</td><td>✓ 5</td><td>✓ 5</td></tr><tr><td>pub-003</td><td>aggregation</td><td>8</td><td>✗ 6</td><td>✗ 6</td></tr><tr><td>pub-002</td><td>temporal</td><td>Chen Ding</td><td>✓ Chen Ding</td><td>✓ Chen Ding</td></tr><tr><td>pub-004</td><td>superlative</td><td>Athletics at the 2008 Summer Olympics – Men's marathon</td><td>✗ Men's marathon</td><td>✗ Men's marathon</td></tr><tr><td>pub-005</td><td>multi_hop</td><td>Naim Süleymanoğlu</td><td>✓ Naim Süleymanoğlu</td><td>✓ Naim Süleymanoğlu</td></tr></tbody></table>
 
 <script>
-const perQtype = {"rag": [{"qtype": "aggregation", "n": 21, "accuracy": 0.5714285714, "recall": 0.3277271853, "tokens_in": 8762.0, "latency_ms": 18341.0}, {"qtype": "lookup", "n": 19, "accuracy": 1.0, "recall": 1.0, "tokens_in": 4472.0, "latency_ms": 15657.0}, {"qtype": "multi_hop", "n": 28, "accuracy": 0.6785714286, "recall": 0.75, "tokens_in": 4495.0, "latency_ms": 16027.0}, {"qtype": "superlative", "n": 10, "accuracy": 0.0, "recall": 0.0907022048, "tokens_in": 4466.5, "latency_ms": 16429.0}, {"qtype": "temporal", "n": 22, "accuracy": 0.8636363636, "recall": 0.4318181818, "tokens_in": 4486.5, "latency_ms": 14364.5}]};
-const summary = {"rag": 100};
+const perQtype = {"rag": [{"qtype": "aggregation", "n": 21, "accuracy": 0.5714285714, "recall": 0.3277271853, "tokens_in": 8762.0, "latency_ms": 18341.0}, {"qtype": "lookup", "n": 19, "accuracy": 1.0, "recall": 1.0, "tokens_in": 4472.0, "latency_ms": 15657.0}, {"qtype": "multi_hop", "n": 28, "accuracy": 0.6785714286, "recall": 0.75, "tokens_in": 4495.0, "latency_ms": 16027.0}, {"qtype": "superlative", "n": 10, "accuracy": 0.0, "recall": 0.0907022048, "tokens_in": 4466.5, "latency_ms": 16429.0}, {"qtype": "temporal", "n": 22, "accuracy": 0.8636363636, "recall": 0.4318181818, "tokens_in": 4486.5, "latency_ms": 14364.5}], "graphrag": [{"qtype": "aggregation", "n": 21, "accuracy": 0.5238095238, "recall": 0.2517211348, "tokens_in": 12413.0, "latency_ms": 17379.0}, {"qtype": "lookup", "n": 19, "accuracy": 1.0, "recall": 1.0, "tokens_in": 8439.0, "latency_ms": 3832.0}, {"qtype": "multi_hop", "n": 28, "accuracy": 0.6428571429, "recall": 0.7142857143, "tokens_in": 8067.0, "latency_ms": 8082.5}, {"qtype": "superlative", "n": 10, "accuracy": 0.0, "recall": 0.0807022048, "tokens_in": 12103.5, "latency_ms": 10992.0}, {"qtype": "temporal", "n": 22, "accuracy": 0.9090909091, "recall": 0.4772727273, "tokens_in": 7694.0, "latency_ms": 5309.5}]};
+const summary = {"rag": 100, "graphrag": 100};
 
 const qtypes = [...new Set(Object.values(perQtype).flat().map(r=>r.qtype))].sort();
 

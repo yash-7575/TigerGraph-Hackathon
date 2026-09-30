@@ -1,0 +1,74 @@
+{
+  "answer": "Yang Ling",
+  "citations": [
+    "Q7500807"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-073",
+  "tokens": {
+    "input": 7104,
+    "output": 95,
+    "cached": 0
+  },
+  "latency_ms": 6324,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q1205250",
+        "Q1204722",
+        "Q26237418",
+        "Q3628768",
+        "Q3879591",
+        "Q7662173"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q3879591",
+        "Q7662173",
+        "Q3628768",
+        "Q1205250",
+        "Q1205250",
+        "Q26237418",
+        "Q3628768",
+        "Q1205250"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q7500807",
+        "Q4443767",
+        "Q7500810",
+        "Q4354069",
+        "Q7500812",
+        "Q7500809",
+        "Q7500816",
+        "Q4443763",
+        "Q3879591",
+        "Q7662173",
+        "Q3628768",
+        "Q1205250"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q1205250"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

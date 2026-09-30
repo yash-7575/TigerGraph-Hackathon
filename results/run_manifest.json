@@ -1,11 +1,11 @@
 {
-  "start_ts": 1790790685.245812,
+  "start_ts": 1790792084.228988,
   "questions": "/home/yash/dev/hack/TigerGraph-Hackathon/data/eval_public.jsonl",
   "n_questions": 100,
   "pipelines": [
-    "rag"
+    "graphrag"
   ],
   "workers": 4,
-  "git_sha": "ff81273bbbe278470d743519f3b764d3ab84b197",
-  "end_ts": 1790791105.059824
+  "git_sha": "20f36ff220f771f914a248fde023b55a22fc2aae",
+  "end_ts": 1790792372.3705914
 }

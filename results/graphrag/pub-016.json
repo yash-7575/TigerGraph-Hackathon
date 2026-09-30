@@ -1,0 +1,72 @@
+{
+  "answer": "Arnd Peiffer",
+  "citations": [
+    "Q47105341"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-016",
+  "tokens": {
+    "input": 8197,
+    "output": 106,
+    "cached": 0
+  },
+  "latency_ms": 2760,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q9663",
+        "Q1005641"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q9663",
+        "Q9663",
+        "Q1005641",
+        "Q303623",
+        "Q9663",
+        "Q9663",
+        "Q9663",
+        "Q9663"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q107861699",
+        "Q107861710",
+        "Q47105341",
+        "Q107802335",
+        "Q107861696",
+        "Q107861704",
+        "Q1004918",
+        "Q107861717",
+        "Q9663",
+        "Q9663",
+        "Q1005641",
+        "Q303623"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q303623",
+        "Q9663",
+        "Q1005641"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

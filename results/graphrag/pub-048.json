@@ -1,0 +1,71 @@
+{
+  "answer": "Servet Tazegül",
+  "citations": [
+    "Q2142977"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-048",
+  "tokens": {
+    "input": 7731,
+    "output": 119,
+    "cached": 0
+  },
+  "latency_ms": 5330,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26233801"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q26233801",
+        "Q303623",
+        "Q607635",
+        "Q26233801",
+        "Q303623",
+        "Q303623",
+        "Q939000",
+        "Q26233801"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q26219849",
+        "Q3980076",
+        "Q1005685",
+        "Q2142977",
+        "Q26219850",
+        "Q7674779",
+        "Q26219852",
+        "Q26219832",
+        "Q26233801",
+        "Q303623",
+        "Q607635",
+        "Q26233801"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q303623",
+        "Q607635",
+        "Q26233801"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

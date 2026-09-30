@@ -1,0 +1,73 @@
+{
+  "answer": "Fazliddin Gaibnazarov",
+  "citations": [
+    "Q26212151"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-096",
+  "tokens": {
+    "input": 6747,
+    "output": 379,
+    "cached": 0
+  },
+  "latency_ms": 16087,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q1005784",
+        "Q1005641",
+        "Q3628768",
+        "Q26233801",
+        "Q26212144",
+        "Q26208755"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q26212144",
+        "Q26208755",
+        "Q26233801",
+        "Q26208755",
+        "Q26233801",
+        "Q3628768",
+        "Q3628768",
+        "Q3628768"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q26208276",
+        "Q26212155",
+        "Q26212151",
+        "Q26208316",
+        "Q26212154",
+        "Q26208513",
+        "Q26218605",
+        "Q26218608",
+        "Q26212144",
+        "Q26208755",
+        "Q26233801",
+        "Q26208755"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": [
+        "Q26233801",
+        "Q26212144",
+        "Q26208755"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

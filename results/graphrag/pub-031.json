@@ -1,0 +1,72 @@
+{
+  "answer": "Dmitry Berestov",
+  "citations": [
+    "Q1750583"
+  ],
+  "pipeline": "graphrag",
+  "qid": "pub-031",
+  "tokens": {
+    "input": 6710,
+    "output": 138,
+    "cached": 0
+  },
+  "latency_ms": 6346,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "entity_link",
+      "seeds": [
+        "Q303623",
+        "Q607635",
+        "Q939000",
+        "Q26212144",
+        "Q25239321",
+        "Q25239533",
+        "Q1433269",
+        "Q1433109",
+        "Q1750589"
+      ]
+    },
+    {
+      "step": 2,
+      "tool": "vector_search",
+      "restricted_to_seeds": true,
+      "hits": [
+        "Q1750589",
+        "Q1433109",
+        "Q1433109",
+        "Q1433269",
+        "Q26212144",
+        "Q1433269",
+        "Q26212144",
+        "Q25239321"
+      ]
+    },
+    {
+      "step": 3,
+      "tool": "vector_search",
+      "union": true,
+      "hits": [
+        "Q1750595",
+        "Q1750583",
+        "Q1750579",
+        "Q679870",
+        "Q1750576",
+        "Q1750592",
+        "Q906854",
+        "Q906859",
+        "Q1750589",
+        "Q1433109",
+        "Q1433109",
+        "Q1433269"
+      ]
+    },
+    {
+      "step": 4,
+      "tool": "doc_fetch",
+      "docs": []
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -82,26 +82,34 @@ def answer(question: str, qtype: str = "lookup", qid: str | None = None) -> Answ
     # k depends on qtype
     k = settings.rag_top_k_aggregation if qtype in ("aggregation", "superlative") else settings.rag_top_k
 
-    # 2. seed-restricted vector search
+    # 2. seed-restricted vector search, UNIONED with global search.
+    # (Restricted-only retrieval fills k with low-similarity seed chunks and
+    # crowds out relevant passages — the global arm is the quality anchor.)
     hits: list[dict[str, Any]] = []
     if seeds:
         seed_ids = [s["doc_id"] for s in seeds]
-        hits = search(question, k=k, doc_ids=seed_ids)
-        trace.append({"step": 2, "tool": "vector_search", "restricted_to_seeds": True, "hits": [h["doc_id"] for h in hits]})
+        restricted = search(question, k=k, doc_ids=seed_ids)
+        trace.append({"step": 2, "tool": "vector_search", "restricted_to_seeds": True, "hits": [h["doc_id"] for h in restricted]})
+    else:
+        restricted = []
+    global_hits = search(question, k=k)
+    seen = {h["chunk_id"] for h in global_hits}
+    hits = list(global_hits)
+    for h in restricted:
+        if h["chunk_id"] not in seen:
+            hits.append(h)
+            seen.add(h["chunk_id"])
+    hits = hits[: k + 4]
+    trace.append({"step": 3, "tool": "vector_search", "union": True, "hits": [h["doc_id"] for h in hits]})
 
-    # 3. broaden if too few hits
-    if len(hits) < max(4, k // 2):
-        extra = search(question, k=k)
-        seen = {h["chunk_id"] for h in hits}
-        for e in extra:
-            if e["chunk_id"] not in seen:
-                hits.append(e)
-        hits = hits[:k * 2]
-        trace.append({"step": 3, "tool": "vector_search", "broadened": True, "hits": [h["doc_id"] for h in hits]})
-
-    # 4. fetch seed doc previews as extra evidence
+    # 4. fetch seed doc previews as extra evidence — ONLY for seeds whose doc
+    # is already in the hit set (previews of unrelated entities add noise and
+    # drive the composer to abstain).
+    hit_docs = {h["doc_id"] for h in hits}
     seed_previews = []
     for s in seeds[:6]:
+        if s["doc_id"] not in hit_docs:
+            continue
         d = doc_fetch(s["doc_id"], max_chars=1500)
         seed_previews.append(d)
     trace.append({"step": 4, "tool": "doc_fetch", "docs": [d["doc_id"] for d in seed_previews]})

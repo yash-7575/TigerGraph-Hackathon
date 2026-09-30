@@ -1,0 +1,33 @@
+{
+  "answer": "Martina Sáblíková",
+  "citations": [
+    "Q580481"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-011",
+  "tokens": {
+    "input": 4530,
+    "output": 242,
+    "cached": 0
+  },
+  "latency_ms": 17548,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q848696",
+        "Q595972",
+        "Q905540",
+        "Q580481",
+        "Q607635",
+        "Q916771",
+        "Q782429",
+        "Q848666"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

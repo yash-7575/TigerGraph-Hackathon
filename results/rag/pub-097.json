@@ -1,0 +1,33 @@
+{
+  "answer": "Yana Shemyakina",
+  "citations": [
+    "Q1156695"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-097",
+  "tokens": {
+    "input": 4409,
+    "output": 88,
+    "cached": 0
+  },
+  "latency_ms": 10844,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q25386274",
+        "Q25384917",
+        "Q25386279",
+        "Q25386275",
+        "Q25384919",
+        "Q25795",
+        "Q1156695",
+        "Q25386262"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

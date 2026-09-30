@@ -1,0 +1,33 @@
+{
+  "answer": "Men's 50 metre rifle prone",
+  "citations": [
+    "Q1005722"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-037",
+  "tokens": {
+    "input": 4529,
+    "output": 276,
+    "cached": 0
+  },
+  "latency_ms": 16173,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1346374",
+        "Q775967",
+        "Q1005719",
+        "Q1005722",
+        "Q1205250",
+        "Q763031",
+        "Q1005423",
+        "Q1360834"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

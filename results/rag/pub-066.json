@@ -1,0 +1,33 @@
+{
+  "answer": "Men's 75 kg",
+  "citations": [
+    "Q7979975"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-066",
+  "tokens": {
+    "input": 4559,
+    "output": 198,
+    "cached": 0
+  },
+  "latency_ms": 16685,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q7979978",
+        "Q7979967",
+        "Q7979968",
+        "Q7979969",
+        "Q7979971",
+        "Q7979973",
+        "Q7979975",
+        "Q7979977"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

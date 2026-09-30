@@ -1,0 +1,33 @@
+{
+  "answer": "Dani King, Laura Trott and Joanna Rowsell",
+  "citations": [
+    "Q2297633"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-015",
+  "tokens": {
+    "input": 4468,
+    "output": 225,
+    "cached": 0
+  },
+  "latency_ms": 21757,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q580474",
+        "Q2297621",
+        "Q2329168",
+        "Q2297633",
+        "Q1005298",
+        "Q2070832",
+        "Q2718019",
+        "Q2437166"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Men's épée (41 competitors)",
+  "citations": [
+    "Q2570052"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-044",
+  "tokens": {
+    "input": 4343,
+    "output": 280,
+    "cached": 0
+  },
+  "latency_ms": 17450,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q2570052",
+        "Q2570149",
+        "Q2570052",
+        "Q2726788",
+        "Q2570158",
+        "Q2726750",
+        "Q1051974",
+        "Q2726746"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Michael Phelps",
+  "citations": [
+    "Q1141105"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-028",
+  "tokens": {
+    "input": 4523,
+    "output": 313,
+    "cached": 0
+  },
+  "latency_ms": 16277,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1141105",
+        "Q3879574",
+        "Q3879583",
+        "Q1028699",
+        "Q3879581",
+        "Q3879576",
+        "Q727687",
+        "Q1141034"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

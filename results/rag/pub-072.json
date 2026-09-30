@@ -1,0 +1,33 @@
+{
+  "answer": "Lee Sang-hwa",
+  "citations": [
+    "Q848666"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-072",
+  "tokens": {
+    "input": 4533,
+    "output": 92,
+    "cached": 0
+  },
+  "latency_ms": 14020,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q15056224",
+        "Q15056225",
+        "Q47309836",
+        "Q952458",
+        "Q15056223",
+        "Q1222127",
+        "Q15506518",
+        "Q848666"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

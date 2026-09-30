@@ -1,0 +1,33 @@
+{
+  "answer": "Women's 10 metre air rifle",
+  "citations": [
+    "Q26218171"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-053",
+  "tokens": {
+    "input": 4524,
+    "output": 257,
+    "cached": 0
+  },
+  "latency_ms": 17489,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26237425",
+        "Q26237421",
+        "Q26237420",
+        "Q26237423",
+        "Q26237418",
+        "Q26218171",
+        "Q26237427",
+        "Q26219824"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

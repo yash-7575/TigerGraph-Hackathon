@@ -1,0 +1,33 @@
+{
+  "answer": "Martin Fourcade",
+  "citations": [
+    "Q47155371"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-049",
+  "tokens": {
+    "input": 4500,
+    "output": 92,
+    "cached": 0
+  },
+  "latency_ms": 11904,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q107861704",
+        "Q107861714",
+        "Q280553",
+        "Q107802335",
+        "Q107861696",
+        "Q47155371",
+        "Q847288",
+        "Q107861717"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

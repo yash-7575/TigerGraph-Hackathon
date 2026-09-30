@@ -1,0 +1,33 @@
+{
+  "answer": "Allison Schmitt",
+  "citations": [
+    "Q2071152"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-013",
+  "tokens": {
+    "input": 4477,
+    "output": 82,
+    "cached": 0
+  },
+  "latency_ms": 14175,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q25932069",
+        "Q25991462",
+        "Q25932666",
+        "Q25991464",
+        "Q25932055",
+        "Q26237636",
+        "Q25927635",
+        "Q2071152"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

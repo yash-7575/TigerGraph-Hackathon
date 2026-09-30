@@ -1,0 +1,33 @@
+{
+  "answer": "Shani Davis",
+  "citations": [
+    "Q848696"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-086",
+  "tokens": {
+    "input": 4530,
+    "output": 98,
+    "cached": 0
+  },
+  "latency_ms": 8262,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q848696",
+        "Q905540",
+        "Q595972",
+        "Q848666",
+        "Q916771",
+        "Q782429",
+        "Q580481",
+        "Q607635"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

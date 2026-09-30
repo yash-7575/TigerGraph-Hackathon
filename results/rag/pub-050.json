@@ -1,0 +1,36 @@
+{
+  "answer": "unknown",
+  "citations": [
+    "Q15056220",
+    "Q15056225",
+    "Q15056223",
+    "Q15056222"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-050",
+  "tokens": {
+    "input": 9078,
+    "output": 472,
+    "cached": 0
+  },
+  "latency_ms": 25030,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q15056220",
+        "Q15056225",
+        "Q15056223",
+        "Q15620700",
+        "Q15056222",
+        "Q15292539",
+        "Q15619183",
+        "Q15620726"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

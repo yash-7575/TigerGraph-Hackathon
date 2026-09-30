@@ -1,0 +1,33 @@
+{
+  "answer": "23",
+  "citations": [
+    "Q26217865"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-025",
+  "tokens": {
+    "input": 3618,
+    "output": 75,
+    "cached": 0
+  },
+  "latency_ms": 13725,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26217865",
+        "Q26219853",
+        "Q65235550",
+        "Q26212161",
+        "Q4160923",
+        "Q26217871",
+        "Q1064016",
+        "Q1193963"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

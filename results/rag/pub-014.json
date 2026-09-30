@@ -1,0 +1,33 @@
+{
+  "answer": "Carolina Marín",
+  "citations": [
+    "Q25301483"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-014",
+  "tokens": {
+    "input": 3846,
+    "output": 151,
+    "cached": 0
+  },
+  "latency_ms": 11199,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26208276",
+        "Q26208316",
+        "Q26212155",
+        "Q25301472",
+        "Q25301483",
+        "Q25301787",
+        "Q26212149",
+        "Q26212154"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

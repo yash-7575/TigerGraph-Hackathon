@@ -1,0 +1,33 @@
+{
+  "answer": "Yevgeny Dementyev",
+  "citations": [
+    "Q824803"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-056",
+  "tokens": {
+    "input": 4470,
+    "output": 123,
+    "cached": 0
+  },
+  "latency_ms": 15711,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q848689",
+        "Q824803",
+        "Q916916",
+        "Q225969",
+        "Q384953",
+        "Q1004888",
+        "Q843851",
+        "Q916724"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

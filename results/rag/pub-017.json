@@ -1,0 +1,33 @@
+{
+  "answer": "Yi Siling",
+  "citations": [
+    "Q1137721"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-017",
+  "tokens": {
+    "input": 4528,
+    "output": 111,
+    "cached": 0
+  },
+  "latency_ms": 13837,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q2268100",
+        "Q2254560",
+        "Q1137721",
+        "Q921100",
+        "Q2268082",
+        "Q2353475",
+        "Q334901",
+        "Q2268043"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

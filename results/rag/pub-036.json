@@ -1,0 +1,33 @@
+{
+  "answer": "Zou Shiming",
+  "citations": [
+    "Q2000524"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-036",
+  "tokens": {
+    "input": 3678,
+    "output": 99,
+    "cached": 0
+  },
+  "latency_ms": 16738,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26037184",
+        "Q26208276",
+        "Q26205999",
+        "Q26212151",
+        "Q26208513",
+        "Q2000524",
+        "Q10572415",
+        "Q4951834"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

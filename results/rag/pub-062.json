@@ -1,0 +1,33 @@
+{
+  "answer": "Tirunesh Dibaba",
+  "citations": [
+    "Q1799275"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-062",
+  "tokens": {
+    "input": 4512,
+    "output": 117,
+    "cached": 0
+  },
+  "latency_ms": 13388,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26233297",
+        "Q26223026",
+        "Q26219862",
+        "Q26219843",
+        "Q26233317",
+        "Q21858030",
+        "Q1422131",
+        "Q1799275"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,31 @@
+{
+  "answer": "unknown",
+  "citations": [],
+  "pipeline": "rag",
+  "qid": "pub-059",
+  "tokens": {
+    "input": 8942,
+    "output": 472,
+    "cached": 0
+  },
+  "latency_ms": 20438,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q107861710",
+        "Q107861714",
+        "Q107861726",
+        "Q107861723",
+        "Q107861706",
+        "Q1222176",
+        "Q14643284",
+        "Q107861699"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

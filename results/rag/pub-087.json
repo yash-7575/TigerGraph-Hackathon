@@ -1,0 +1,39 @@
+{
+  "answer": "",
+  "citations": [],
+  "pipeline": "rag",
+  "qid": "pub-087",
+  "tokens": {
+    "input": 17613,
+    "output": 1312,
+    "cached": 0
+  },
+  "latency_ms": 30733,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 16,
+      "hits": [
+        "Q1405425",
+        "Q3628682",
+        "Q3628699",
+        "Q3628692",
+        "Q3628705",
+        "Q2377414",
+        "Q3628687",
+        "Q3628703",
+        "Q3628689",
+        "Q3628708",
+        "Q10522584",
+        "Q3628678",
+        "Q645460",
+        "Q3628702",
+        "Q3628690",
+        "Q198766"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

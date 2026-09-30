@@ -1,0 +1,33 @@
+{
+  "answer": "Jason Lamy Chappuis",
+  "citations": [
+    "Q303268"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-040",
+  "tokens": {
+    "input": 4516,
+    "output": 101,
+    "cached": 0
+  },
+  "latency_ms": 14901,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q15056068",
+        "Q15056067",
+        "Q303268",
+        "Q15055007",
+        "Q15056065",
+        "Q15055009",
+        "Q15021060",
+        "Q988372"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

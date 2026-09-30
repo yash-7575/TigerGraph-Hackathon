@@ -1,0 +1,33 @@
+{
+  "answer": "Renaud Lavillenie",
+  "citations": [
+    "Q2000968"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-007",
+  "tokens": {
+    "input": 4518,
+    "output": 85,
+    "cached": 0
+  },
+  "latency_ms": 14038,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26208457",
+        "Q26224939",
+        "Q2000968",
+        "Q26233789",
+        "Q26208442",
+        "Q1438466",
+        "Q26233791",
+        "Q26203840"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

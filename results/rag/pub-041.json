@@ -1,0 +1,33 @@
+{
+  "answer": "Nino Schurter",
+  "citations": [
+    "Q25476845"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-041",
+  "tokens": {
+    "input": 4497,
+    "output": 80,
+    "cached": 0
+  },
+  "latency_ms": 15794,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q25476845",
+        "Q25476835",
+        "Q25476761",
+        "Q26260943",
+        "Q2297686",
+        "Q26213160",
+        "Q26237425",
+        "Q26259596"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

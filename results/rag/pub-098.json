@@ -1,0 +1,33 @@
+{
+  "answer": "Wijan Ponlid",
+  "citations": [
+    "Q4951839"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-098",
+  "tokens": {
+    "input": 4493,
+    "output": 759,
+    "cached": 0
+  },
+  "latency_ms": 25778,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q3879600",
+        "Q1076288",
+        "Q8037963",
+        "Q1076363",
+        "Q7372009",
+        "Q3899247",
+        "Q7979995",
+        "Q4951839"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

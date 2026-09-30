@@ -1,0 +1,33 @@
+{
+  "answer": "Aslanbek Khushtov",
+  "citations": [
+    "Q1005294"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-090",
+  "tokens": {
+    "input": 3882,
+    "output": 137,
+    "cached": 0
+  },
+  "latency_ms": 15577,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q2358254",
+        "Q1005294",
+        "Q767959",
+        "Q3837500",
+        "Q305439",
+        "Q8037914",
+        "Q2550697",
+        "Q2358274"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

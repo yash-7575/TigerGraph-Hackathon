@@ -1,0 +1,33 @@
+{
+  "answer": "Hwang Young-Cho",
+  "citations": [
+    "Q1407627"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-023",
+  "tokens": {
+    "input": 4427,
+    "output": 102,
+    "cached": 0
+  },
+  "latency_ms": 13568,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1407627",
+        "Q7400304",
+        "Q1408927",
+        "Q1409048",
+        "Q10522543",
+        "Q3879657",
+        "Q955943",
+        "Q10522593"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

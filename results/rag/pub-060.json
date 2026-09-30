@@ -1,0 +1,33 @@
+{
+  "answer": "Robeisy Ramírez",
+  "citations": [
+    "Q332673"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-060",
+  "tokens": {
+    "input": 3539,
+    "output": 268,
+    "cached": 0
+  },
+  "latency_ms": 14343,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q960100",
+        "Q1005787",
+        "Q1005554",
+        "Q585714",
+        "Q326382",
+        "Q1137646",
+        "Q332673",
+        "Q932145"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

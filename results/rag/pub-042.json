@@ -1,0 +1,33 @@
+{
+  "answer": "47",
+  "citations": [
+    "Q1005805"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-042",
+  "tokens": {
+    "input": 4159,
+    "output": 75,
+    "cached": 0
+  },
+  "latency_ms": 15680,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1005805",
+        "Q1005641",
+        "Q1005286",
+        "Q1222712",
+        "Q1005331",
+        "Q1005616",
+        "Q988347",
+        "Q988361"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

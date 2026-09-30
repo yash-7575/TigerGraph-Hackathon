@@ -1,0 +1,33 @@
+{
+  "answer": "Soling",
+  "citations": [
+    "Q7400333"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-008",
+  "tokens": {
+    "input": 3743,
+    "output": 235,
+    "cached": 0
+  },
+  "latency_ms": 16685,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q7400330",
+        "Q7400329",
+        "Q7400333",
+        "Q7400328",
+        "Q7400332",
+        "Q7400327",
+        "Q7400334",
+        "Q7372003"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

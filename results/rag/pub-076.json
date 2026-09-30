@@ -1,0 +1,33 @@
+{
+  "answer": "Julia Mancuso",
+  "citations": [
+    "Q2574045"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-076",
+  "tokens": {
+    "input": 4479,
+    "output": 90,
+    "cached": 0
+  },
+  "latency_ms": 15981,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q917752",
+        "Q2574045",
+        "Q585893",
+        "Q1042644",
+        "Q917747",
+        "Q917743",
+        "Q823663",
+        "Q1005801"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

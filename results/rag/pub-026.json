@@ -1,0 +1,33 @@
+{
+  "answer": "Jaroslav Kulhavý",
+  "citations": [
+    "Q2036655"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-026",
+  "tokens": {
+    "input": 4489,
+    "output": 103,
+    "cached": 0
+  },
+  "latency_ms": 13447,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q25476845",
+        "Q2036655",
+        "Q2212666",
+        "Q25476835",
+        "Q26260943",
+        "Q26221551",
+        "Q24760634",
+        "Q26262252"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

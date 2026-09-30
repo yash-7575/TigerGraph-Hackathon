@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import time
 from typing import Any
 
@@ -33,6 +34,11 @@ def _format_passages(hits: list[dict[str, Any]]) -> str:
     return "\n\n".join(lines)
 
 
+_ANSWER_RE = re.compile(r'"answer"\s*:\s*"((?:[^"\\]|\\.)*)"', re.DOTALL)
+_CITE_RE = re.compile(r'"citations"\s*:\s*\[([^\]]*)\]', re.DOTALL)
+_DOCID_RE = re.compile(r'"([QP]\d+(?:#\d+)?)"')
+
+
 def _parse_answer(raw: str) -> dict[str, Any]:
     raw = raw.strip()
     if raw.startswith("```"):
@@ -40,17 +46,30 @@ def _parse_answer(raw: str) -> dict[str, Any]:
         if raw.startswith("json"):
             raw = raw[4:]
         raw = raw.rsplit("```", 1)[0]
+    raw = raw.strip()
     try:
-        return json.loads(raw.strip())
+        return json.loads(raw)
     except Exception:
-        # try to salvage
-        start = raw.find("{")
-        end = raw.rfind("}")
-        if start >= 0 and end > start:
-            try:
-                return json.loads(raw[start:end + 1])
-            except Exception:
-                pass
+        pass
+    # try full-object slice
+    start = raw.find("{")
+    end = raw.rfind("}")
+    if start >= 0 and end > start:
+        try:
+            return json.loads(raw[start:end + 1])
+        except Exception:
+            pass
+    # regex salvage (handles truncated JSON)
+    ans = ""
+    cites: list[str] = []
+    m = _ANSWER_RE.search(raw)
+    if m:
+        ans = m.group(1).encode().decode("unicode_escape", errors="ignore")
+    mc = _CITE_RE.search(raw)
+    if mc:
+        cites = _DOCID_RE.findall(mc.group(1))
+    if ans or cites:
+        return {"answer": ans, "citations": cites}
     return {"answer": raw[:200], "citations": []}
 
 
@@ -71,7 +90,7 @@ def answer(question: str, qtype: str = "lookup", qid: str | None = None) -> Answ
         messages=messages,
         model=settings.llm_model_orch,
         temperature=0.0,
-        max_tokens=512,
+        max_tokens=800,
     )
     parsed = _parse_answer(raw.get("content") or "")
 

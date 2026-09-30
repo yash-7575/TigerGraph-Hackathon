@@ -1,0 +1,33 @@
+{
+  "answer": "Pernilla Wiberg",
+  "citations": [
+    "Q1222212"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-083",
+  "tokens": {
+    "input": 4470,
+    "output": 120,
+    "cached": 0
+  },
+  "latency_ms": 17381,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1005292",
+        "Q1222212",
+        "Q1005746",
+        "Q1222469",
+        "Q1005575",
+        "Q1005640",
+        "Q988372",
+        "Q1005808"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Sebastián Crismanich",
+  "citations": [
+    "Q934172"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-055",
+  "tokens": {
+    "input": 3802,
+    "output": 115,
+    "cached": 0
+  },
+  "latency_ms": 14554,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26219850",
+        "Q26219852",
+        "Q26219832",
+        "Q3980075",
+        "Q934172",
+        "Q7674788",
+        "Q7674778",
+        "Q1339098"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

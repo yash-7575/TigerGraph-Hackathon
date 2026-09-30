@@ -1,0 +1,33 @@
+{
+  "answer": "Fazliddin Gaibnazarov",
+  "citations": [
+    "Q26212151"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-096",
+  "tokens": {
+    "input": 3178,
+    "output": 179,
+    "cached": 0
+  },
+  "latency_ms": 14333,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26208276",
+        "Q26212155",
+        "Q26212151",
+        "Q26208316",
+        "Q26212154",
+        "Q26208513",
+        "Q26218605",
+        "Q26218608"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Kjetil André Aamodt",
+  "citations": [
+    "Q1534918"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-043",
+  "tokens": {
+    "input": 4158,
+    "output": 141,
+    "cached": 0
+  },
+  "latency_ms": 16073,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1534918",
+        "Q1005286",
+        "Q1005805",
+        "Q1005572",
+        "Q988347",
+        "Q988374",
+        "Q1005331",
+        "Q870647"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

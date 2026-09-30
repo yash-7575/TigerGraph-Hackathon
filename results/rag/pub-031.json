@@ -1,0 +1,33 @@
+{
+  "answer": "Dmitry Berestov",
+  "citations": [
+    "Q1750583"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-031",
+  "tokens": {
+    "input": 4558,
+    "output": 89,
+    "cached": 0
+  },
+  "latency_ms": 15822,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1750595",
+        "Q1750583",
+        "Q1750579",
+        "Q679870",
+        "Q1750576",
+        "Q1750592",
+        "Q906854",
+        "Q906859"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

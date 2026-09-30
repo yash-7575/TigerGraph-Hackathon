@@ -1,0 +1,33 @@
+{
+  "answer": "Men's épée",
+  "citations": [
+    "Q38594"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-084",
+  "tokens": {
+    "input": 4446,
+    "output": 242,
+    "cached": 0
+  },
+  "latency_ms": 17004,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q38605",
+        "Q38594",
+        "Q38599",
+        "Q38601",
+        "Q38412",
+        "Q38591",
+        "Q38407",
+        "Q38410"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

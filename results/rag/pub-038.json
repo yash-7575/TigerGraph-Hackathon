@@ -1,0 +1,33 @@
+{
+  "answer": "Pyrros Dimas",
+  "citations": [
+    "Q7979999"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-038",
+  "tokens": {
+    "input": 4425,
+    "output": 117,
+    "cached": 0
+  },
+  "latency_ms": 16455,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q7979999",
+        "Q7372006",
+        "Q6303877",
+        "Q7979995",
+        "Q6303889",
+        "Q7371997",
+        "Q1076363",
+        "Q3879600"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "18",
+  "citations": [
+    "Q3498987"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-091",
+  "tokens": {
+    "input": 4481,
+    "output": 75,
+    "cached": 0
+  },
+  "latency_ms": 9471,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q3498987",
+        "Q3879648",
+        "Q3498926",
+        "Q8037901",
+        "Q3499001",
+        "Q3499038",
+        "Q3498614",
+        "Q2072744"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

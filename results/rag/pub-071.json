@@ -1,0 +1,33 @@
+{
+  "answer": "24",
+  "citations": [
+    "Q47155365"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-071",
+  "tokens": {
+    "input": 4453,
+    "output": 73,
+    "cached": 0
+  },
+  "latency_ms": 14392,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q47155365",
+        "Q14643199",
+        "Q47155505",
+        "Q47155425",
+        "Q107861714",
+        "Q915058",
+        "Q1221867",
+        "Q47091419"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Virgilijus Alekna",
+  "citations": [
+    "Q3628777"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-064",
+  "tokens": {
+    "input": 4510,
+    "output": 596,
+    "cached": 0
+  },
+  "latency_ms": 20165,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q3628778",
+        "Q3628777",
+        "Q7372003",
+        "Q7371997",
+        "Q1076363",
+        "Q3628775",
+        "Q7371998",
+        "Q7372002"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

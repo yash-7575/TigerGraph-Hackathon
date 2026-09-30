@@ -1,0 +1,33 @@
+{
+  "answer": "Leontien Zijlaard",
+  "citations": [
+    "Q2133123"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-079",
+  "tokens": {
+    "input": 4444,
+    "output": 125,
+    "cached": 0
+  },
+  "latency_ms": 15954,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q3879600",
+        "Q2774005",
+        "Q2133123",
+        "Q1076363",
+        "Q875653",
+        "Q3001459",
+        "Q2526348",
+        "Q3879597"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

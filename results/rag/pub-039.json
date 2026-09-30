@@ -1,0 +1,33 @@
+{
+  "answer": "Sandra Perković",
+  "citations": [
+    "Q1771958"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-039",
+  "tokens": {
+    "input": 4484,
+    "output": 100,
+    "cached": 0
+  },
+  "latency_ms": 16611,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26234091",
+        "Q1771958",
+        "Q26214545",
+        "Q26234144",
+        "Q26234119",
+        "Q26234051",
+        "Q3628776",
+        "Q3628696"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Rosannagh MacLennan",
+  "citations": [
+    "Q284413"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-067",
+  "tokens": {
+    "input": 4493,
+    "output": 103,
+    "cached": 0
+  },
+  "latency_ms": 12219,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q284413",
+        "Q284423",
+        "Q580474",
+        "Q588440",
+        "Q1050909",
+        "Q1067772",
+        "Q539696",
+        "Q2297621"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

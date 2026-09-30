@@ -1,0 +1,33 @@
+{
+  "answer": "Rafaela Silva",
+  "citations": [
+    "Q26217865"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-006",
+  "tokens": {
+    "input": 3643,
+    "output": 109,
+    "cached": 0
+  },
+  "latency_ms": 13131,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q65235550",
+        "Q26217865",
+        "Q4160923",
+        "Q1064016",
+        "Q26219853",
+        "Q1193963",
+        "Q3811005",
+        "Q65235562"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

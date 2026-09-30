@@ -1,0 +1,33 @@
+{
+  "answer": "24",
+  "citations": [
+    "Q2269155"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-068",
+  "tokens": {
+    "input": 4480,
+    "output": 73,
+    "cached": 0
+  },
+  "latency_ms": 10934,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q2269155",
+        "Q2036655",
+        "Q2174649",
+        "Q25476835",
+        "Q939000",
+        "Q2297633",
+        "Q2718019",
+        "Q843287"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

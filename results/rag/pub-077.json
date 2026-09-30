@@ -1,0 +1,33 @@
+{
+  "answer": "Kaillie Humphries",
+  "citations": [
+    "Q110264144"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-077",
+  "tokens": {
+    "input": 4524,
+    "output": 98,
+    "cached": 0
+  },
+  "latency_ms": 16152,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q110264101",
+        "Q110264107",
+        "Q110264143",
+        "Q110264144",
+        "Q107861704",
+        "Q107802335",
+        "Q107861696",
+        "Q107861699"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

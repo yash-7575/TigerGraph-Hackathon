@@ -1,0 +1,101 @@
+qid,qtype,correct,any_hit,recall_at_k,n_citations,tokens_in,tokens_out,cached,latency_ms,budget_exceeded,error,answer,gold_answer
+pub-001,aggregation,True,True,0.45454545454545453,5,8737,452,0,11903,False,,5,5
+pub-003,aggregation,False,True,0.35294117647058826,6,8829,443,0,11963,False,,6,8
+pub-002,temporal,True,True,0.5,1,4484,97,0,12868,False,,Chen Ding,Chen Ding
+pub-004,superlative,False,True,0.023255813953488372,1,4487,246,0,15487,False,,Men's marathon,Athletics at the 2008 Summer Olympics – Men's marathon
+pub-005,multi_hop,True,True,1.0,1,4212,97,0,9296,False,,Naim Süleymanoğlu,Naim Süleymanoğlu
+pub-006,temporal,True,True,0.5,1,3643,109,0,13131,False,,Rafaela Silva,Rafaela Silva
+pub-007,temporal,True,True,0.5,1,4518,85,0,14038,False,,Renaud Lavillenie,Renaud Lavillenie
+pub-008,superlative,False,True,0.125,1,3743,235,0,16685,False,,Soling,Sailing at the 2000 Summer Olympics – Soling
+pub-009,lookup,True,True,1.0,1,4197,67,0,15856,False,,26,26
+pub-011,multi_hop,True,True,1.0,1,4530,242,0,17548,False,,Martina Sáblíková,Martina Sáblíková
+pub-012,aggregation,True,True,0.42857142857142855,6,8752,413,0,18341,False,,6,6
+pub-013,temporal,True,True,0.5,1,4477,82,0,14175,False,,Allison Schmitt,Allison Schmitt
+pub-014,multi_hop,True,True,1.0,1,3846,151,0,11199,False,,Carolina Marín,Carolina Marín
+pub-010,aggregation,True,True,0.4,4,17423,1262,0,32228,False,,4,4
+pub-017,multi_hop,True,True,1.0,1,4528,111,0,13837,False,,Yi Siling,Yi Siling
+pub-016,temporal,True,True,0.5,1,4492,95,0,19125,False,,Arnd Peiffer,Arnd Peiffer
+pub-018,temporal,True,True,0.5,1,4479,89,0,13915,False,,Kevin Jackson,Kevin Jackson
+pub-015,multi_hop,False,True,1.0,1,4468,225,0,21757,False,,"Dani King, Laura Trott and Joanna Rowsell",Dani KingLaura TrottJoanna Rowsell
+pub-019,aggregation,True,True,0.375,3,8762,213,0,14771,False,,3,3
+pub-021,superlative,False,True,0.1,1,3829,128,0,14035,False,,Men's giant slalom,Alpine skiing at the 1988 Winter Olympics – Men's giant slalom
+pub-020,aggregation,False,True,0.3,3,8370,192,0,17223,False,,3,4
+pub-023,multi_hop,True,True,1.0,1,4427,102,0,13568,False,,Hwang Young-Cho,Hwang Young-Cho
+pub-022,multi_hop,False,False,0.0,1,8232,498,0,26603,False,,unknown,Ayumi Tanimoto
+pub-024,aggregation,True,True,0.375,3,8747,293,0,15403,False,,3,3
+pub-025,lookup,True,True,1.0,1,3618,75,0,13725,False,,23,23
+pub-026,temporal,True,True,0.5,1,4489,103,0,13447,False,,Jaroslav Kulhavý,Jaroslav Kulhavý
+pub-027,aggregation,True,True,0.4,4,8610,254,0,17284,False,,4,4
+pub-028,multi_hop,True,True,1.0,1,4523,313,0,16277,False,,Michael Phelps,Michael Phelps
+pub-029,lookup,True,True,1.0,1,4548,74,0,15657,False,,28,28
+pub-031,multi_hop,True,True,1.0,1,4558,89,0,15822,False,,Dmitry Berestov,Dmitry Berestov
+pub-032,lookup,True,True,1.0,1,4472,79,0,16424,False,,34,34
+pub-033,aggregation,True,True,0.2857142857142857,4,8479,434,0,21197,False,,4,4
+pub-030,multi_hop,False,False,0.0,1,7798,773,0,28549,False,,unknown,Emese Szász
+pub-034,lookup,True,True,1.0,1,4494,68,0,8774,False,,23,23
+pub-035,lookup,True,True,1.0,1,4543,77,0,9410,False,,30,30
+pub-036,temporal,True,True,0.5,1,3678,99,0,16738,False,,Zou Shiming,Zou Shiming
+pub-037,superlative,False,True,0.07142857142857142,1,4529,276,0,16173,False,,Men's 50 metre rifle prone,Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone
+pub-038,multi_hop,True,True,1.0,1,4425,117,0,16455,False,,Pyrros Dimas,Pyrros Dimas
+pub-039,temporal,True,True,0.5,1,4484,100,0,16611,False,,Sandra Perković,Sandra Perković
+pub-040,temporal,True,True,0.5,1,4516,101,0,14901,False,,Jason Lamy Chappuis,Jason Lamy Chappuis
+pub-041,multi_hop,True,True,1.0,1,4497,80,0,15794,False,,Nino Schurter,Nino Schurter
+pub-042,lookup,True,True,1.0,1,4159,75,0,15680,False,,47,47
+pub-043,multi_hop,True,True,1.0,1,4158,141,0,16073,False,,Kjetil André Aamodt,Kjetil André Aamodt
+pub-044,superlative,False,True,0.1,1,4343,280,0,17450,False,,Men's épée (41 competitors),Fencing at the 2008 Summer Olympics – Men's épée
+pub-046,lookup,True,True,1.0,1,4465,75,0,16352,False,,50,50
+pub-047,lookup,True,True,1.0,1,4512,109,0,15940,False,,24,24
+pub-045,aggregation,False,True,0.16279069767441862,7,8774,784,0,22497,False,,7,20
+pub-048,temporal,True,True,0.5,1,4079,102,0,11806,False,,Servet Tazegül,Servet Tazegül
+pub-049,temporal,True,True,0.5,1,4500,92,0,11904,False,,Martin Fourcade,Martin Fourcade
+pub-052,lookup,True,True,1.0,1,4461,73,0,13934,False,,20,20
+pub-051,aggregation,False,True,0.25,4,8787,607,0,21775,False,,4,6
+pub-050,multi_hop,False,False,0.0,4,9078,472,0,25030,False,,unknown,Lee Sang-hwa
+pub-053,superlative,False,True,0.07142857142857142,1,4524,257,0,17489,False,,Women's 10 metre air rifle,Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle
+pub-054,lookup,True,True,1.0,1,4494,76,0,12808,False,,24,24
+pub-055,temporal,True,True,0.5,1,3802,115,0,14554,False,,Sebastián Crismanich,Sebastián Crismanich
+pub-056,temporal,True,True,0.5,1,4470,123,0,15711,False,,Yevgeny Dementyev,Yevgeny Dementyev
+pub-060,multi_hop,False,False,0.0,1,3539,268,0,14343,False,,Robeisy Ramírez,Yana Shemyakina
+pub-057,temporal,False,False,0.0,0,8990,580,0,29240,False,,unknown,Allyson Felix
+pub-059,temporal,False,False,0.0,0,8942,472,0,20438,False,,unknown,Laura Dahlmeier
+pub-058,aggregation,True,True,0.4166666666666667,5,17563,1242,0,30004,False,,5,5
+pub-061,lookup,True,True,1.0,1,4413,73,0,10993,False,,34,34
+pub-062,temporal,True,True,0.5,1,4512,117,0,13388,False,,Tirunesh Dibaba,Tirunesh Dibaba
+pub-063,lookup,True,True,1.0,1,4518,73,0,15872,False,,41,41
+pub-064,multi_hop,False,False,0.0,1,4510,596,0,20165,False,,Virgilijus Alekna,Gabriela Szabo
+pub-066,superlative,False,True,0.1,1,4559,198,0,16685,False,,Men's 75 kg,Weightlifting at the 1992 Summer Olympics – Men's 75 kg
+pub-067,multi_hop,True,True,1.0,1,4493,103,0,12219,False,,Rosannagh MacLennan,Rosannagh MacLennan
+pub-065,aggregation,True,True,0.45454545454545453,5,8756,521,0,26959,False,,5,5
+pub-068,lookup,True,True,1.0,1,4480,73,0,10934,False,,24,24
+pub-069,aggregation,True,True,0.3,3,7865,316,0,12845,False,,3,3
+pub-070,aggregation,False,True,0.2,2,8831,389,0,15414,False,,2,3
+pub-071,lookup,True,True,1.0,1,4453,73,0,14392,False,,24,24
+pub-072,temporal,True,True,0.5,1,4533,92,0,14020,False,,Lee Sang-hwa,Lee Sang-hwa
+pub-073,multi_hop,True,True,1.0,1,4527,86,0,14148,False,,Yang Ling,Yang Ling
+pub-074,lookup,True,True,1.0,1,4471,78,0,17043,False,,17,17
+pub-075,lookup,True,True,1.0,1,4479,74,0,16564,False,,32,32
+pub-076,multi_hop,True,True,1.0,1,4479,90,0,15981,False,,Julia Mancuso,Julia Mancuso
+pub-077,multi_hop,True,True,1.0,1,4524,98,0,16152,False,,Kaillie Humphries,Kaillie Humphries
+pub-078,aggregation,False,True,0.25,4,8831,424,0,17721,False,,4,7
+pub-079,multi_hop,True,True,1.0,1,4444,125,0,15954,False,,Leontien Zijlaard,Leontien Zijlaard
+pub-080,lookup,True,True,1.0,1,4466,80,0,15869,False,,17,17
+pub-081,multi_hop,True,True,1.0,1,4534,159,0,16227,False,,Guo Wenjun,Guo Wenjun
+pub-083,multi_hop,True,True,1.0,1,4470,120,0,17381,False,,Pernilla Wiberg,Pernilla Wiberg
+pub-084,superlative,False,True,0.125,1,4446,242,0,17004,False,,Men's épée,Fencing at the 1992 Summer Olympics – Men's épée
+pub-085,superlative,False,True,0.09090909090909091,1,4499,144,0,14991,False,,Men's 470,Sailing at the 2008 Summer Olympics – Men's 470
+pub-082,aggregation,False,True,0.23076923076923078,6,8791,755,0,25991,False,,6,12
+pub-086,multi_hop,True,True,1.0,1,4530,98,0,8262,False,,Shani Davis,Shani Davis
+pub-088,superlative,False,True,0.1,1,4162,128,0,15216,False,,Men's giant slalom,Alpine skiing at the 1992 Winter Olympics – Men's giant slalom
+pub-090,temporal,True,True,0.5,1,3882,137,0,15577,False,,Aslanbek Khushtov,Aslanbek Khushtov
+pub-089,aggregation,True,True,0.4166666666666667,5,8754,404,0,19970,False,,5,5
+pub-091,lookup,True,True,1.0,1,4481,75,0,9471,False,,18,18
+pub-087,aggregation,False,False,0.0,0,17613,1312,0,30733,False,,,17
+pub-093,aggregation,True,True,0.4444444444444444,4,8720,307,0,13506,False,,4,4
+pub-094,temporal,True,True,0.5,1,4492,134,0,15563,False,,Oleg Kucherenko,Oleg Kucherenko
+pub-092,aggregation,False,True,0.38461538461538464,5,8802,773,0,20901,False,,5,6
+pub-095,multi_hop,False,False,0.0,1,4518,637,0,16667,False,,Usain Bolt,Valerie Vili
+pub-096,multi_hop,True,True,1.0,1,3178,179,0,14333,False,,Fazliddin Gaibnazarov,Fazliddin Gaibnazarov
+pub-097,temporal,True,True,0.5,1,4409,88,0,10844,False,,Yana Shemyakina,Yana Shemyakina
+pub-099,multi_hop,False,True,1.0,1,4477,189,0,15868,False,,Erik Lesser,Erik LesserDaniel BöhmArnd PeifferSimon Schempp
+pub-100,temporal,False,False,0.0,0,9016,405,0,14682,False,,unknown,Missy Franklin
+pub-098,multi_hop,False,False,0.0,1,4493,759,0,25778,False,,Wijan Ponlid,Bekzat Sattarkhanov

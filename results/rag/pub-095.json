@@ -1,0 +1,33 @@
+{
+  "answer": "Usain Bolt",
+  "citations": [
+    "Q754844"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-095",
+  "tokens": {
+    "input": 4518,
+    "output": 637,
+    "cached": 0
+  },
+  "latency_ms": 16667,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q830711",
+        "Q743905",
+        "Q947691",
+        "Q754844",
+        "Q517035",
+        "Q1084677",
+        "Q766954",
+        "Q1043361"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

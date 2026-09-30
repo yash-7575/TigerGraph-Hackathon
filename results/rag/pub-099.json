@@ -1,0 +1,33 @@
+{
+  "answer": "Erik Lesser",
+  "citations": [
+    "Q15052014"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-099",
+  "tokens": {
+    "input": 4477,
+    "output": 189,
+    "cached": 0
+  },
+  "latency_ms": 15868,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q14643284",
+        "Q15052019",
+        "Q15052012",
+        "Q15052025",
+        "Q15052014",
+        "Q14643126",
+        "Q15052022",
+        "Q15021060"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

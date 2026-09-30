@@ -1,0 +1,42 @@
+{
+  "answer": "2",
+  "citations": [
+    "Q782429",
+    "Q848696"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-070",
+  "tokens": {
+    "input": 8831,
+    "output": 389,
+    "cached": 0
+  },
+  "latency_ms": 15414,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 16,
+      "hits": [
+        "Q848666",
+        "Q905485",
+        "Q607635",
+        "Q905540",
+        "Q595972",
+        "Q938791",
+        "Q782429",
+        "Q379473",
+        "Q848696",
+        "Q916747",
+        "Q905659",
+        "Q938779",
+        "Q769542",
+        "Q610603",
+        "Q843851",
+        "Q614894"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

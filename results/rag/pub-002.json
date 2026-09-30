@@ -1,0 +1,33 @@
+{
+  "answer": "Chen Ding",
+  "citations": [
+    "Q1050909"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-002",
+  "tokens": {
+    "input": 4484,
+    "output": 97,
+    "cached": 0
+  },
+  "latency_ms": 12868,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26233122",
+        "Q26225938",
+        "Q26233320",
+        "Q936622",
+        "Q776944",
+        "Q3628781",
+        "Q853023",
+        "Q1050909"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

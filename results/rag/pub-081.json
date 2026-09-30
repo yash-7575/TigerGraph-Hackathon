@@ -1,0 +1,33 @@
+{
+  "answer": "Guo Wenjun",
+  "citations": [
+    "Q736527"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-081",
+  "tokens": {
+    "input": 4534,
+    "output": 159,
+    "cached": 0
+  },
+  "latency_ms": 16227,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q940196",
+        "Q1204722",
+        "Q1005722",
+        "Q1005606",
+        "Q1346374",
+        "Q1205250",
+        "Q775967",
+        "Q736527"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

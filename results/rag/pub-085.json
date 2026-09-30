@@ -1,0 +1,33 @@
+{
+  "answer": "Men's 470",
+  "citations": [
+    "Q2564420"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-085",
+  "tokens": {
+    "input": 4499,
+    "output": 144,
+    "cached": 0
+  },
+  "latency_ms": 14991,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q2563908",
+        "Q2564420",
+        "Q2732386",
+        "Q1001497",
+        "Q2634280",
+        "Q2460802",
+        "Q2566720",
+        "Q2558792"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

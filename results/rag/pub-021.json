@@ -1,0 +1,33 @@
+{
+  "answer": "Men's giant slalom",
+  "citations": [
+    "Q1005804"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-021",
+  "tokens": {
+    "input": 3829,
+    "output": 128,
+    "cached": 0
+  },
+  "latency_ms": 14035,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q1005284",
+        "Q1005639",
+        "Q1005804",
+        "Q1005328",
+        "Q1005744",
+        "Q1222255",
+        "Q988359",
+        "Q15703663"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Yang Ling",
+  "citations": [
+    "Q7500807"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-073",
+  "tokens": {
+    "input": 4527,
+    "output": 86,
+    "cached": 0
+  },
+  "latency_ms": 14148,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q7500807",
+        "Q4443767",
+        "Q7500810",
+        "Q4354069",
+        "Q7500812",
+        "Q7500809",
+        "Q7500816",
+        "Q4443763"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

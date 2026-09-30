@@ -1,0 +1,33 @@
+{
+  "answer": "Arnd Peiffer",
+  "citations": [
+    "Q47105341"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-016",
+  "tokens": {
+    "input": 4492,
+    "output": 95,
+    "cached": 0
+  },
+  "latency_ms": 19125,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q107861699",
+        "Q107861710",
+        "Q47105341",
+        "Q107802335",
+        "Q107861696",
+        "Q107861704",
+        "Q1004918",
+        "Q107861717"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

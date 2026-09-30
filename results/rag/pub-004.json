@@ -1,0 +1,33 @@
+{
+  "answer": "Men's marathon",
+  "citations": [
+    "Q693595"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-004",
+  "tokens": {
+    "input": 4487,
+    "output": 246,
+    "cached": 0
+  },
+  "latency_ms": 15487,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q693595",
+        "Q830711",
+        "Q1005784",
+        "Q743905",
+        "Q247070",
+        "Q922248",
+        "Q853072",
+        "Q766954"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

@@ -1,0 +1,33 @@
+{
+  "answer": "Oleg Kucherenko",
+  "citations": [
+    "Q3499058"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-094",
+  "tokens": {
+    "input": 4492,
+    "output": 134,
+    "cached": 0
+  },
+  "latency_ms": 15563,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q8037916",
+        "Q8037927",
+        "Q3499058",
+        "Q8037913",
+        "Q8037914",
+        "Q8037915",
+        "Q8037918",
+        "Q8037923"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

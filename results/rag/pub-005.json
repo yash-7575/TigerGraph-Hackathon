@@ -1,0 +1,33 @@
+{
+  "answer": "Naim Süleymanoğlu",
+  "citations": [
+    "Q25239316"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-005",
+  "tokens": {
+    "input": 4212,
+    "output": 97,
+    "cached": 0
+  },
+  "latency_ms": 9296,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q4160921",
+        "Q55615395",
+        "Q55615399",
+        "Q10522576",
+        "Q10522554",
+        "Q25239314",
+        "Q3500407",
+        "Q25239316"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

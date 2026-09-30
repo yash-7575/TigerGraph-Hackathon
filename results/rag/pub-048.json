@@ -1,0 +1,33 @@
+{
+  "answer": "Servet Tazegül",
+  "citations": [
+    "Q2142977"
+  ],
+  "pipeline": "rag",
+  "qid": "pub-048",
+  "tokens": {
+    "input": 4079,
+    "output": 102,
+    "cached": 0
+  },
+  "latency_ms": 11806,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "vector_search",
+      "k": 8,
+      "hits": [
+        "Q26219849",
+        "Q3980076",
+        "Q1005685",
+        "Q2142977",
+        "Q26219850",
+        "Q7674779",
+        "Q26219852",
+        "Q26219832"
+      ]
+    }
+  ],
+  "budget_exceeded": false,
+  "error": null
+}

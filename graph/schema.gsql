@@ -1,0 +1,68 @@
+// OlympicsKG schema — Round 1 minimal
+// Vector attribute uses TigerGraph 4.x TigerVector embedding syntax.
+
+USE GLOBAL
+
+CREATE VERTEX Document (
+  PRIMARY_ID doc_id STRING,
+  title STRING,
+  url STRING,
+  wikidata_qid STRING,
+  approx_tokens UINT
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE VERTEX Chunk (
+  PRIMARY_ID chunk_id STRING,
+  doc_id STRING,
+  ord UINT,
+  text STRING
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE VERTEX Entity (
+  PRIMARY_ID qid STRING,
+  name STRING,
+  type STRING
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE VERTEX Games (
+  PRIMARY_ID qid STRING,
+  name STRING,
+  year UINT,
+  season STRING,
+  host_city STRING
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE VERTEX Event (
+  PRIMARY_ID qid STRING,
+  name STRING,
+  sport STRING,
+  games_qid STRING,
+  venue STRING,
+  start_date STRING,
+  end_date STRING,
+  competitors INT,
+  nations_count INT
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE DIRECTED EDGE HAS_CHUNK (FROM Document, TO Chunk, ord UINT)
+
+CREATE DIRECTED EDGE MENTIONS (FROM Document, TO Entity, count UINT)
+
+CREATE DIRECTED EDGE PART_OF (FROM Event, TO Games,
+  source_doc_id STRING, asserted_at STRING, confidence FLOAT)
+
+CREATE DIRECTED EDGE HELD_AT (FROM Event, TO Entity,
+  date_range STRING, source_doc_id STRING, asserted_at STRING, confidence FLOAT)
+
+CREATE DIRECTED EDGE WON (FROM Entity, TO Event,
+  medal STRING, nation_qid STRING, result STRING,
+  source_doc_id STRING, asserted_at STRING, confidence FLOAT)
+
+CREATE DIRECTED EDGE COMPETED_IN (FROM Entity, TO Event,
+  nation_qid STRING, source_doc_id STRING)
+
+CREATE DIRECTED EDGE REPRESENTS (FROM Entity, TO Entity,
+  from_year INT, to_year INT, source_doc_id STRING)
+
+CREATE GRAPH OlympicsKG (Document, Chunk, Entity, Games, Event,
+  HAS_CHUNK, MENTIONS, PART_OF, HELD_AT, WON, COMPETED_IN, REPRESENTS)

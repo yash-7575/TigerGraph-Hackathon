@@ -1,0 +1,10 @@
+pyTigerGraph
+openai
+python-dotenv
+tqdm
+pandas
+tiktoken
+rapidfuzz
+pytest
+pydantic-settings
+loguru
